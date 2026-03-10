@@ -111,4 +111,16 @@ Aquesta pràctica demostra:
 - Treball amb branques  
 - Commits clars i freqüents  
 - Pull Requests amb revisió  
-- Refactorització progressiva i organitzada  
+- Refactorització progressiva i organitzada
+
+---
+
+## 📝 Licencia
+
+Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
+
+---
+
+## ✉️ Contacto
+
+**Autor**: [00Yulin00](https://github.com/00Yulin00)
