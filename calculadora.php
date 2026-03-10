@@ -18,6 +18,6 @@ function calcular($operacio, $primerNumero, $segonNumero) {
         }
     }
 }
-
-echo $repuesta;
+$respuesta = calcular($operacio, $primerNumero, $segonNumero);
+echo $respuesta;
 ?>
