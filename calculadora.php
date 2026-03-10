@@ -4,18 +4,21 @@ $primerNumero = $_POST['n1'];
 $segonNumero = $_POST['n2'];
 
 function calcular($operacio, $primerNumero, $segonNumero) {
-    if ($operacio == "s") {
-        return $primerNumero + $segonNumero;
-    } else if ($operacio == "r") {
-        return $primerNumero - $segonNumero;
-    } else if ($operacio == "m") {
-        return $primerNumero * $segonNumero;
-    } else if ($operacio == "d") {
-        if ($segonNumero != 0) {
+    switch ($operacio) {
+        case "s":
+            return $primerNumero + $segonNumero;
+
+        case "r":
+            return $primerNumero - $segonNumero;
+
+        case "m":
+            return $primerNumero * $segonNumero;
+
+        case "d":
+            if ($segonNumero == 0) {
+                return "Error";
+            }
             return $primerNumero / $segonNumero;
-        } else {
-            return "Error";
-        }
     }
 }
 $respuesta = calcular($operacio, $primerNumero, $segonNumero);
