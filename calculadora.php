@@ -1,26 +1,31 @@
 <?php
-$operacio = $_POST['op'];
-$primerNumero = $_POST['n1'];
-$segonNumero = $_POST['n2'];
+// Recollim les dades enviades
+$operacio = $_POST['op'];      // Tipus d'operació: s, r, m, d
+$primerNumero = $_POST['n1'];  // Primer valor numèric
+$segonNumero = $_POST['n2'];   // Segon valor numèric
 
+// Funció per realitzar càlculs matemàtics bàsics
 function calcular($operacio, $primerNumero, $segonNumero) {
+    // Utilitzem un switch per decidir quina operació fer segons el valor de $operacio
     switch ($operacio) {
-        case "s":
+        case "s": // Cas de Suma
             return $primerNumero + $segonNumero;
-
-        case "r":
+        case "r": // Cas de Resta
             return $primerNumero - $segonNumero;
-
-        case "m":
+        case "m": // Cas de Multiplicació
             return $primerNumero * $segonNumero;
-
-        case "d":
+        case "d": // Cas de Divisió
+            // Validació important: comprovem si el divisor és zero per evitar errors matemàtics
             if ($segonNumero == 0) {
                 return "Error";
             }
             return $primerNumero / $segonNumero;
+        default: // Per si es rep una operació no vàlida
+            return "Operació no vàlida";
     }
 }
+// Cridem a la funció passant-li les dades rebudes i guardem el resultat
 $respuesta = calcular($operacio, $primerNumero, $segonNumero);
+// Mostrem el resultat final per pantalla
 echo $respuesta;
 ?>
