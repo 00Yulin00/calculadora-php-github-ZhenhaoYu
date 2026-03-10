@@ -17,11 +17,11 @@ function calcular($operacio, $primerNumero, $segonNumero) {
         case "d": // Cas de Divisió
             // Validació important: comprovem si el divisor és zero per evitar errors matemàtics
             if ($segonNumero == 0) {
-                return "Error";
+                return "Error: divisió per zero";
             }
             return $primerNumero / $segonNumero;
-        default: // Per si es rep una operació no vàlida
-            return "Operació no vàlida";
+        default: // control d'operació desconeguda i missatges d'error
+            return "Error: operació desconeguda";
     }
 }
 // Cridem a la funció passant-li les dades rebudes i guardem el resultat
